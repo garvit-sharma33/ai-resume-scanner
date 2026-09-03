@@ -1,0 +1,15 @@
+pandas
+numpy
+streamlit
+fastapi
+uvicorn
+PyMuPDF
+python-docx
+spacy
+nltk
+scikit-learn
+requests
+httpx
+matplotlib
+plotly
+reportlab
