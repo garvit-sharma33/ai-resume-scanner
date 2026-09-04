@@ -1,0 +1,29 @@
+🤖 AI Resume Scanner & Job Prediction System
+
+Development: Day 1 / 10 ✅
+
+✅ Completed
+Project requirements finalized
+10-day development plan finalized
+GitHub repository created
+Local project folder created
+Python virtual environment created
+Virtual environment activated
+Initial project structure created
+requirements.txt created
+.gitignore created
+README.md created
+run.py created
+app/main.py created
+Basic Python execution tested
+Git initialized
+Initial commit created
+Project pushed to GitHub
+
+**AI Resume Scanner — Day 2 Status**
+
+* Resume Parser successfully created for **PDF + DOCX** files.
+* PDF extraction using **pdfplumber** and DOCX extraction using **python-docx** completed.
+* Added **text cleaning, file-type detection, error handling, and empty-file validation**.
+* Tested PDF, DOCX, and unsupported file types successfully.
+* **Next: Day 3 — Resume Analysis Engine (Skills, Education, Experience extraction).**
