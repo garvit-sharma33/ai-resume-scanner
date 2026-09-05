@@ -1,0 +1,25 @@
+{
+    "degrees": [
+        "BCA",
+        "B.Tech",
+        "BE",
+        "MCA",
+        "M.Tech",
+        "MBA",
+        "BBA",
+        "BSc",
+        "MSc",
+        "BA",
+        "MA",
+        "PhD"
+    ],
+    "education_keywords": [
+        "Bachelor",
+        "Master",
+        "Diploma",
+        "Engineering",
+        "Computer Applications",
+        "Computer Science",
+        "Information Technology"
+    ]
+}

@@ -16,6 +16,7 @@ def extract_text_from_pdf(file_path):
                 if page_text:
                     text += page_text + "\n"
 
+
     except FileNotFoundError:
         print("Error: Resume file was not found.")
 
@@ -26,6 +27,8 @@ def extract_text_from_pdf(file_path):
         print(f"Error while processing PDF: {error}")
 
     return text
+
+    
 
 
 # Extract text from a DOCX resume

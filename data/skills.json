@@ -1,0 +1,38 @@
+{
+    "programming": [
+        "Python",
+        "C",
+        "C++",
+        "Java",
+        "JavaScript"
+    ],
+    "data_science": [
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Scikit-learn",
+        "Machine Learning"
+    ],
+    "database": [
+        "SQL",
+        "MySQL",
+        "SQLite",
+        "PostgreSQL",
+        "MongoDB"
+    ],
+    "web": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Streamlit",
+        "FastAPI"
+    ],
+    "tools": [
+        "Git",
+        "GitHub",
+        "Docker",
+        "VS Code"
+    ]
+}

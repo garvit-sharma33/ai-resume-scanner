@@ -27,3 +27,13 @@ Project pushed to GitHub
 * Added **text cleaning, file-type detection, error handling, and empty-file validation**.
 * Tested PDF, DOCX, and unsupported file types successfully.
 * **Next: Day 3 — Resume Analysis Engine (Skills, Education, Experience extraction).**
+
+
+
+# AI Resume Scanner — Day 3 Status
+
+* Resume Analysis Engine successfully completed.
+* Added Skills, Education, Experience, Basic Info and Resume Sections extraction.
+* Added external JSON databases for skills, education and experience keywords.
+* Added experience detail extraction and tested PDF/DOCX processing.
+* Next: Day 4 — Resume Scoring, Job Role Detection & Resume Improvement.
