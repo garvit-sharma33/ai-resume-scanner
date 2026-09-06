@@ -182,6 +182,235 @@ def detect_sections(text):
     return sections
 
 
+    # Calculate an overall resume score out of 100
+def calculate_resume_score(skills, education, experience_details, sections):
+
+    score = 0
+
+    # Skills score: maximum 40 marks
+    skill_count = len(skills)
+
+    if skill_count >= 10:
+        score += 40
+    elif skill_count >= 7:
+        score += 32
+    elif skill_count >= 4:
+        score += 24
+    elif skill_count >= 1:
+        score += 12
+
+    # Education score: maximum 20 marks
+    if education:
+        score += 20
+
+    # Experience score: maximum 20 marks
+    if experience_details:
+        score += 20
+
+    # Section score: 5 marks for each important section
+    important_sections = [
+        "Skills",
+        "Education",
+        "Experience",
+        "Projects"
+    ]
+
+    for section in important_sections:
+        if section in sections:
+            score += 5
+
+    return score
+
+
+# Calculate category-wise resume score
+def calculate_score_breakdown(skills, education, experience_details, sections):
+
+    breakdown = {
+        "skills_score": 0,
+        "education_score": 0,
+        "experience_score": 0,
+        "sections_score": 0
+    }
+
+    # Skills score
+    skill_count = len(skills)
+
+    if skill_count >= 10:
+        breakdown["skills_score"] = 40
+    elif skill_count >= 7:
+        breakdown["skills_score"] = 32
+    elif skill_count >= 4:
+        breakdown["skills_score"] = 24
+    elif skill_count >= 1:
+        breakdown["skills_score"] = 12
+
+    # Education score
+    if education:
+        breakdown["education_score"] = 20
+
+    # Experience score
+    if experience_details:
+        breakdown["experience_score"] = 20
+
+    # Resume sections score
+    important_sections = [
+        "Skills",
+        "Education",
+        "Experience",
+        "Projects"
+    ]
+
+    for section in important_sections:
+        if section in sections:
+            breakdown["sections_score"] += 5
+
+    return breakdown
+
+
+# Convert the resume score into a readable rating
+def get_resume_rating(score):
+
+    if score >= 90:
+        return "Excellent"
+
+    elif score >= 75:
+        return "Good"
+
+    elif score >= 60:
+        return "Average"
+
+    elif score >= 40:
+        return "Needs Improvement"
+
+    else:
+        return "Poor"
+
+
+# Load job roles and their required/preferred skills
+def load_job_roles():
+
+    with open("data/job_roles.json", "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+# Compare resume skills with job role skills and calculate match percentage
+def detect_job_roles(skills):
+
+    job_roles = load_job_roles()
+    job_matches = []
+
+    for role, requirements in job_roles.items():
+
+        required_skills = requirements["required"]
+        preferred_skills = requirements["preferred"]
+
+        # Count matching required skills
+        required_matches = 0
+
+        for skill in required_skills:
+            if skill in skills:
+                required_matches += 1
+
+        # Count matching preferred skills
+        preferred_matches = 0
+
+        for skill in preferred_skills:
+            if skill in skills:
+                preferred_matches += 1
+
+        total_skills = len(required_skills) + len(preferred_skills)
+        matched_skills = required_matches + preferred_matches
+
+        # Calculate overall role match percentage
+        if total_skills > 0:
+            match_percentage = round(
+                (matched_skills / total_skills) * 100
+            )
+        else:
+            match_percentage = 0
+
+        # Only keep roles with a meaningful skill match
+        if match_percentage >= 30:
+
+            job_matches.append({
+                "role": role,
+                "match_percentage": match_percentage
+            })
+
+
+    # Show highest matching roles first
+    job_matches.sort(
+        key=lambda item: item["match_percentage"],
+        reverse=True
+    )
+
+    return job_matches
+
+
+# Find skills that are useful for recommended job roles but missing from the resume
+def find_skill_gaps(skills, job_matches):
+
+    job_roles = load_job_roles()
+    skill_gaps = {}
+
+    for job in job_matches:
+
+        role = job["role"]
+        match_percentage = job["match_percentage"]
+
+        required_skills = job_roles[role]["required"]
+        preferred_skills = job_roles[role]["preferred"]
+
+        missing_skills = []
+
+        # Check missing required skills
+        for skill in required_skills:
+            if skill not in skills:
+                missing_skills.append(skill)
+
+        # Check missing preferred skills
+        for skill in preferred_skills:
+            if skill not in skills:
+                missing_skills.append(skill)
+
+        skill_gaps[role] = {
+            "match_percentage": match_percentage,
+            "missing_skills": missing_skills
+        }
+
+    return skill_gaps
+
+
+# Load learning suggestions for different skills
+def load_skill_suggestions():
+
+    with open("data/skill_suggestions.json", "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+# Generate learning suggestions for missing skills
+def generate_skill_suggestions(skill_gaps):
+
+    suggestions_data = load_skill_suggestions()
+    suggestions = {}
+
+    for role, data in skill_gaps.items():
+
+        role_suggestions = []
+
+        for skill in data["missing_skills"]:
+
+            if skill in suggestions_data:
+
+                role_suggestions.append({
+                    "skill": skill,
+                    "suggestion": suggestions_data[skill]
+                })
+
+        suggestions[role] = role_suggestions
+
+    return suggestions
+
 # Analyze resume text and extract important information
 def analyze_resume(text):
 
@@ -191,6 +420,24 @@ def analyze_resume(text):
     basic_info = extract_basic_info(text)
     sections = detect_sections(text)
     experience_details = extract_experience_details(text)
+    score = calculate_resume_score(
+            skills,
+            education,
+            experience_details,
+            sections
+        )
+
+    score_breakdown = calculate_score_breakdown(
+            skills,
+            education,
+            experience_details,
+            sections
+        )
+
+    rating = get_resume_rating(score)
+    job_matches = detect_job_roles(skills)
+    skill_gaps = find_skill_gaps(skills, job_matches)
+    suggestions = generate_skill_suggestions(skill_gaps)
 
     resume_data = {
 
@@ -201,6 +448,12 @@ def analyze_resume(text):
         "education": education,
         "experience": experience,
         "experience_details": experience_details,
+        "resume_score": score,
+        "score_breakdown": score_breakdown,
+        "resume_rating": rating,
+        "job_matches": job_matches,
+        "skill_gaps": skill_gaps,
+        "skill_suggestions": suggestions,
         "sections": sections,
         "total_skills": len(skills)
         
@@ -247,3 +500,47 @@ if __name__ == "__main__":
 
         print("\nTotal Skills:")
         print(result["total_skills"])
+
+        print("\nResume Score:")
+        print(result["resume_score"], "/ 100")
+
+        print("\nScore Breakdown:")
+        print(result["score_breakdown"])
+
+        print("\nResume Rating:")
+        print(result["resume_rating"])
+
+        print("\nJob Role Matches:")
+
+        for job in result["job_matches"]:
+            print(
+                job["role"],
+                "->",
+                job["match_percentage"],
+                "%"
+            )
+
+        print("\nSkill Gaps:")
+
+        for role, data in result["skill_gaps"].items():
+
+            print(
+                role,
+                "-> Missing:",
+                data["missing_skills"]
+            )
+
+        print("\nSkill Improvement Suggestions:")
+
+        for role, suggestions in result["skill_suggestions"].items():
+
+            print("\n" + role)
+
+            for item in suggestions:
+
+                print(
+                    "-",
+                    item["skill"],
+                    ":",
+                    item["suggestion"]
+                )

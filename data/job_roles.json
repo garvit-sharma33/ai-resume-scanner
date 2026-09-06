@@ -1,0 +1,91 @@
+{
+    "C Developer": {
+        "required": ["C"],
+        "preferred": ["Git", "GitHub", "SQL"]
+    },
+
+    "C++ Developer": {
+        "required": ["C++"],
+        "preferred": ["Git", "GitHub", "SQL"]
+    },
+
+    "Java Developer": {
+        "required": ["Java"],
+        "preferred": ["SQL", "Git", "GitHub"]
+    },
+
+    "Python Developer": {
+        "required": ["Python"],
+        "preferred": ["SQL", "Git", "GitHub"]
+    },
+
+    "Frontend Developer": {
+        "required": ["HTML", "CSS", "JavaScript"],
+        "preferred": ["React", "Git", "GitHub"]
+    },
+
+    "Backend Developer": {
+        "required": ["Python", "SQL"],
+        "preferred": ["FastAPI", "Git", "GitHub"]
+    },
+
+    "Full Stack Developer": {
+        "required": ["HTML", "CSS", "JavaScript"],
+        "preferred": ["React", "Python", "SQL", "FastAPI"]
+    },
+
+    "Web Developer": {
+        "required": ["HTML", "CSS", "JavaScript"],
+        "preferred": ["React", "Git", "GitHub"]
+    },
+
+    "Data Analyst": {
+        "required": ["Python", "SQL"],
+        "preferred": ["Pandas", "NumPy", "Matplotlib"]
+    },
+
+    "Data Scientist": {
+        "required": ["Python", "SQL"],
+        "preferred": ["Pandas", "NumPy", "Scikit-learn", "Machine Learning"]
+    },
+
+    "Machine Learning Engineer": {
+        "required": ["Python", "Machine Learning"],
+        "preferred": ["NumPy", "Pandas", "Scikit-learn", "Git"]
+    },
+
+    "AI Engineer": {
+        "required": ["Python", "Machine Learning"],
+        "preferred": ["NumPy", "Pandas", "Scikit-learn", "FastAPI"]
+    },
+
+    "Database Developer": {
+        "required": ["SQL"],
+        "preferred": ["MySQL", "PostgreSQL", "SQLite", "Python"]
+    },
+
+    "DevOps Engineer": {
+        "required": ["Git"],
+        "preferred": ["Docker", "Linux", "AWS", "Python"]
+    },
+
+    "Cloud Engineer": {
+        "required": ["AWS"],
+        "preferred": ["Docker", "Linux", "Git", "Python"]
+    },
+
+    "Software Developer": {
+        "required": ["Git"],
+        "preferred": ["Python", "Java", "C++", "SQL"]
+    },
+
+    "QA / Test Engineer": {
+        "required": ["Python"],
+        "preferred": ["SQL", "Git", "Java"]
+    },
+
+    "Cybersecurity Analyst": {
+        "required": ["Linux"],
+        "preferred": ["Python", "Networking", "SQL", "Git"]
+    }
+}
