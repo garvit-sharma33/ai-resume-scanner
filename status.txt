@@ -37,3 +37,13 @@ Project pushed to GitHub
 * Added external JSON databases for skills, education and experience keywords.
 * Added experience detail extraction and tested PDF/DOCX processing.
 * Next: Day 4 — Resume Scoring, Job Role Detection & Resume Improvement.
+
+
+
+# AI Resume Scanner — Day 4 Status
+
+* Resume scoring system successfully added with a score out of 100.
+* Added score breakdown and resume rating (Excellent, Good, Average, etc.).
+* Added broad job-role database covering C, C++, Java, Python, Web, Data, AI/ML, Cloud and DevOps.
+* Added job-role matching, relevant role filtering, skill-gap detection and improvement suggestions.
+* Day 4 core development completed; next: Day 5 — Job/Internship API integration.
