@@ -47,3 +47,26 @@ Project pushed to GitHub
 * Added broad job-role database covering C, C++, Java, Python, Web, Data, AI/ML, Cloud and DevOps.
 * Added job-role matching, relevant role filtering, skill-gap detection and improvement suggestions.
 * Day 4 core development completed; next: Day 5 — Job/Internship API integration.
+
+
+### Day 5 — Project Status
+
+**AI Resume Scanner — Day 5 Complete ✅**
+
+Himalayas public Job API ko project mein integrate kiya.
+Live job listings fetch, clean aur resume skills ke saath match ki ja rahi hain.
+Match percentage ke basis par recommended jobs rank ho rahi hain.
+Matched skills, missing skills aur application links bhi show ho rahe hain.
+**Day 5 changes GitHub par successfully pushed hain.**
+
+
+
+### Day 6 — Project Status
+
+**AI Resume Scanner — Day 6 Complete ✅**
+
+Skill Gap Analyzer aur improved Job Matching system complete ho gaya.
+Resume skills ko live jobs ke required skills se compare karke matched/missing skills identify ho rahi hain.
+Match percentage, recommendation label aur learning suggestions generate ho rahe hain.
+Day 6 changes GitHub par commit aur push kar diye gaye hain.
+**Next: Day 7 — Career Roadmap, Job Readiness & Career Prediction.**

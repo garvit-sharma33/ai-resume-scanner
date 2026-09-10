@@ -1,0 +1,105 @@
+{
+    "Python Developer": {
+        "skills": [
+            "Python",
+            "SQL",
+            "Git",
+            "GitHub",
+            "FastAPI"
+        ],
+        "steps": [
+            "Learn Python fundamentals and OOP",
+            "Practice SQL and databases",
+            "Learn Git and GitHub",
+            "Build REST APIs using FastAPI",
+            "Build and deploy Python projects"
+        ]
+    },
+
+    "Data Analyst": {
+        "skills": [
+            "Python",
+            "SQL",
+            "Pandas",
+            "NumPy",
+            "Matplotlib"
+        ],
+        "steps": [
+            "Learn Python for data analysis",
+            "Learn SQL and database queries",
+            "Master Pandas and NumPy",
+            "Learn data visualization",
+            "Build real-world data analysis projects"
+        ]
+    },
+
+    "Data Scientist": {
+        "skills": [
+            "Python",
+            "SQL",
+            "Pandas",
+            "NumPy",
+            "Scikit-learn",
+            "Machine Learning"
+        ],
+        "steps": [
+            "Master Python and data analysis",
+            "Learn SQL and data handling",
+            "Learn statistics and visualization",
+            "Learn Machine Learning",
+            "Build and deploy ML projects"
+        ]
+    },
+
+    "Frontend Developer": {
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Git"
+        ],
+        "steps": [
+            "Learn HTML and webpage structure",
+            "Learn CSS and responsive design",
+            "Learn JavaScript",
+            "Learn React",
+            "Build and deploy frontend projects"
+        ]
+    },
+
+    "Backend Developer": {
+        "skills": [
+            "Python",
+            "SQL",
+            "FastAPI",
+            "Git",
+            "GitHub"
+        ],
+        "steps": [
+            "Learn Python and OOP",
+            "Learn SQL and databases",
+            "Learn REST API development",
+            "Build APIs using FastAPI",
+            "Deploy backend applications"
+        ]
+    },
+
+    "Machine Learning Engineer": {
+        "skills": [
+            "Python",
+            "NumPy",
+            "Pandas",
+            "Scikit-learn",
+            "Machine Learning",
+            "Git"
+        ],
+        "steps": [
+            "Master Python programming",
+            "Learn NumPy and Pandas",
+            "Learn Machine Learning algorithms",
+            "Practice model evaluation",
+            "Build and deploy ML projects"
+        ]
+    }
+}
