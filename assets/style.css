@@ -1,0 +1,142 @@
+/* =====================================================
+   AI RESUME SCANNER — DARK SAAS THEME
+   ===================================================== */
+
+/* ---------- GLOBAL ---------- */
+
+.stApp {
+    background: #0B1120;
+    color: #F8FAFC;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.block-container {
+    max-width: 1400px;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+section[data-testid="stSidebar"] {
+    background: #080D1A;
+    border-right: 1px solid #1E293B;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #F8FAFC;
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+h1 {
+    color: #F8FAFC;
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    color: #E2E8F0;
+}
+
+
+/* ---------- NORMAL TEXT ---------- */
+
+p,
+label,
+.stMarkdown {
+    color: #CBD5E1;
+}
+
+
+/* ---------- DASHBOARD CARDS ---------- */
+
+.dashboard-card {
+    background: #111827;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 1px solid #1E293B;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- INPUT BOXES ---------- */
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #111827;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 10px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.stButton > button {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.stButton > button:hover {
+    background: #2563EB;
+    border: none;
+}
+
+
+/* ---------- FILE UPLOADER ---------- */
+
+section[data-testid="stFileUploader"] {
+    background: #111827;
+    border: 1px dashed #334155;
+    border-radius: 12px;
+}
+
+
+/* ---------- INFO / SUCCESS BOXES ---------- */
+
+div[data-testid="stAlert"] {
+    background: #111827;
+    border-radius: 10px;
+}
+
+
+/* ---------- SIDEBAR RADIO ---------- */
+
+section[data-testid="stSidebar"] label {
+    border-radius: 8px;
+}
+
+
+/* ---------- TOP HEADER ---------- */
+
+header[data-testid="stHeader"] {
+    background: #0B1120;
+}
+
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080D1A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
