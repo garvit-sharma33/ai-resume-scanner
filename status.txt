@@ -82,3 +82,23 @@ System overall Job Readiness Score aur Career Recommendation bhi provide karta h
 Personalized career roadmap aur missing skills identify ho rahi hain.
 **Day 7 changes GitHub par successfully pushed hain.**
 
+DAY 8 STATUS — STREAMLIT UI + RESUME BUILDER
+
+• Professional dark Streamlit UI created with sidebar navigation.
+• Dashboard, Resume Scanner, Career Assistant, Resume Builder & Application Tracker pages added.
+• Resume Builder created with Personal Info, Summary, Skills, Education, Experience & Projects.
+• Resume Preview and Download Resume functionality completed and tested.
+• Day 8 changes committed and pushed to GitHub.
+
+NEXT: DAY 9 — APPLICATION TRACKER
+
+
+DAY 9 STATUS — APPLICATION TRACKER
+
+• Created SQLite database for storing job/internship applications.
+• Added Add, View, Update Status and Delete application functionality.
+• Added application status filters: Applied, Interview, Selected, Rejected and Withdrawn.
+• Added application statistics for Total, Applied, Interviews and Selected.
+• Integrated Application Tracker with the Streamlit UI and tested successfully.
+
+NEXT: DAY 10 — LLM INTEGRATION + FINAL PROJECT INTEGRATION
