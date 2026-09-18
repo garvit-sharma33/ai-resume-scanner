@@ -17,3 +17,6 @@ uploads/
 Thumbs.db
 
 status.txt
+
+.env
+done.txt

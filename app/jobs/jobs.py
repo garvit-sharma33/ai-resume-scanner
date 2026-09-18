@@ -303,8 +303,8 @@ def rank_jobs(resume_skills, jobs):
             job_result["match_percentage"]
         )
 
-        # Keep only jobs having at least one matched skill
-        if job_result["matched_skills"]:
+        # Show only relevant jobs
+        if job_result["match_percentage"] >= 40:
             ranked_jobs.append(job_result)
 
     ranked_jobs.sort(

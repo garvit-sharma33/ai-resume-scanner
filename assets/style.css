@@ -1,142 +1,471 @@
-/* =====================================================
-   AI RESUME SCANNER — DARK SAAS THEME
-   ===================================================== */
-
-/* ---------- GLOBAL ---------- */
+/* =========================================================
+   AI RESUME SCANNER — DARK SAAS UI
+   CSS ONLY
+   ========================================================= */
 
 .stApp {
-    background: #0B1120;
+    background:
+        radial-gradient(circle at 10% 0%, rgba(59,130,246,.10), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(99,102,241,.08), transparent 25%),
+        #080D1A;
     color: #F8FAFC;
 }
 
-
-/* ---------- MAIN CONTENT ---------- */
-
 .block-container {
-    max-width: 1400px;
-    padding-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    max-width: 1450px;
+    padding-top: 2.2rem;
+    padding-bottom: 4rem;
 }
 
-
-/* ---------- SIDEBAR ---------- */
+/* ================= SIDEBAR ================= */
 
 section[data-testid="stSidebar"] {
-    background: #080D1A;
+    background: linear-gradient(180deg, #080D1A 0%, #0B1220 100%);
     border-right: 1px solid #1E293B;
 }
 
-section[data-testid="stSidebar"] * {
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 4px 25px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1D4ED8;
+    font-size: 21px;
+}
+
+.brand-title {
+    color: #F8FAFC;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.brand-subtitle {
+    color: #64748B;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.sidebar-label {
+    color: #60A5FA;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    margin: 4px 0 10px;
+}
+
+div[role="radiogroup"] {
+    gap: 6px;
+}
+
+div[role="radiogroup"] label {
+    border-radius: 11px;
+    padding: 11px 12px;
+    color: #94A3B8;
+    transition: .2s ease;
+}
+
+div[role="radiogroup"] label:hover {
+    background: #111827;
     color: #F8FAFC;
 }
 
-
-/* ---------- HEADINGS ---------- */
-
-h1 {
+div[role="radiogroup"] label:has(input:checked) {
+    background: #172554;
     color: #F8FAFC;
+    border-left: 3px solid #3B82F6;
+}
+
+div[role="radiogroup"] label p {
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.sidebar-footer {
+    position: fixed;
+    bottom: 20px;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.sidebar-footer small {
+    color: #475569;
+}
+
+/* ================= HEADERS ================= */
+
+.page-kicker {
+    color: #60A5FA;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+}
+
+.page-title {
+    margin: 5px 0 5px;
+    color: #F8FAFC;
+    font-size: 39px;
+    font-weight: 850;
+    letter-spacing: -1.2px;
+}
+
+.page-subtitle {
+    margin: 0 0 28px;
+    color: #94A3B8;
+    font-size: 16px;
+}
+
+/* ================= CARDS ================= */
+
+.custom-card,
+.metric-card,
+.hero-card,
+.section-card,
+.highlight-card,
+.ai-card,
+.job-card,
+.application-card {
+    background: rgba(17,24,39,.88);
+    border: 1px solid #1E293B;
+    border-radius: 18px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.18);
+}
+
+.custom-card {
+    padding: 22px;
+}
+
+.metric-card {
+    min-height: 145px;
+    padding: 20px;
+}
+
+.metric-icon {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.metric-label {
+    color: #94A3B8;
+    font-size: 12px;
     font-weight: 700;
 }
 
-h2,
-h3 {
-    color: #E2E8F0;
+.metric-value {
+    color: #F8FAFC;
+    font-size: 27px;
+    font-weight: 850;
+    margin-top: 5px;
 }
 
+.metric-note {
+    color: #64748B;
+    font-size: 12px;
+    margin-top: 4px;
+}
 
-/* ---------- NORMAL TEXT ---------- */
+/* ================= HERO ================= */
 
-p,
-label,
-.stMarkdown {
+.hero-card {
+    padding: 42px;
+    margin: 10px 0 25px;
+    background: linear-gradient(135deg, #111827, #0F1B35);
+    border-color: #243B63;
+}
+
+.hero-icon {
+    font-size: 48px;
+}
+
+.hero-kicker {
+    color: #60A5FA;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-top: 12px;
+}
+
+.hero-card h2,
+.section-card h3,
+.highlight-card h3,
+.ai-card h3 {
+    color: #F8FAFC;
+}
+
+.hero-card p,
+.section-card p,
+.highlight-card p {
+    color: #94A3B8;
+}
+
+/* ================= SPECIAL CARDS ================= */
+
+.section-card {
+    padding: 22px;
+}
+
+.highlight-card {
+    padding: 20px 24px;
+    border-color: #1D4ED8;
+    background: linear-gradient(135deg, #111827, #172554);
+    margin: 20px 0;
+}
+
+.ai-card {
+    padding: 24px;
+    border-color: #1D4ED8;
+    background: linear-gradient(135deg, #0F172A, #111D3A);
+}
+
+.ai-response {
+    color: #CBD5E1;
+    line-height: 1.75;
+    white-space: pre-wrap;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.skill-chip {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 999px;
+    background: #172554;
+    border: 1px solid #1D4ED8;
+    color: #BFDBFE;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.muted-text {
+    color: #64748B;
+}
+
+/* ================= SCORE ================= */
+
+.score-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.score-ring {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-inner {
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    background: #111827;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-number {
+    color: #F8FAFC;
+    font-size: 36px;
+    font-weight: 850;
+}
+
+.score-label {
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+/* ================= JOBS ================= */
+
+.job-card {
+    padding: 22px;
+    margin-top: 8px;
+}
+
+.job-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.job-top h2 {
+    color: #F8FAFC;
+    margin: 5px 0;
+}
+
+.job-top p {
+    color: #94A3B8;
+    margin: 4px 0;
+}
+
+.job-number,
+.application-number {
+    color: #64748B;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.job-match {
+    min-width: 105px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 14px;
+    background: #172554;
+    border: 1px solid #1D4ED8;
+}
+
+.job-match strong {
+    display: block;
+    color: #60A5FA;
+    font-size: 27px;
+}
+
+.job-match span {
+    color: #94A3B8;
+    font-size: 11px;
+}
+
+/* ================= APPLICATIONS ================= */
+
+.application-card {
+    padding: 22px;
+    margin-top: 8px;
+}
+
+.application-card h2 {
+    color: #F8FAFC;
+    margin: 5px 0 8px;
+}
+
+.application-card p {
+    color: #94A3B8;
+    margin: 4px 0;
+}
+
+/* ================= STATUS ================= */
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.status-applied {
+    background: #172554;
+    color: #93C5FD;
+}
+
+.status-interview {
+    background: #3F2A05;
+    color: #FCD34D;
+}
+
+.status-selected {
+    background: #052E1B;
+    color: #86EFAC;
+}
+
+.status-rejected {
+    background: #3B1118;
+    color: #FDA4AF;
+}
+
+.status-withdrawn {
+    background: #1E293B;
     color: #CBD5E1;
 }
 
+/* ================= INPUTS ================= */
 
-/* ---------- DASHBOARD CARDS ---------- */
-
-.dashboard-card {
+div[data-testid="stFileUploader"] {
     background: #111827;
-    padding: 1.5rem;
+    border: 1px dashed #334155;
     border-radius: 16px;
-    border: 1px solid #1E293B;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    padding: 10px;
 }
-
-
-/* ---------- INPUT BOXES ---------- */
 
 .stTextInput input,
 .stTextArea textarea,
-.stSelectbox div[data-baseweb="select"] {
-    background-color: #111827;
-    color: #F8FAFC;
-    border: 1px solid #334155;
-    border-radius: 10px;
+.stSelectbox div[data-baseweb="select"] > div {
+    background: #0F172A !important;
+    border-color: #334155 !important;
+    color: #F8FAFC !important;
 }
 
+/* ================= BUTTONS ================= */
 
-/* ---------- BUTTONS ---------- */
+.stButton > button,
+.stLinkButton > a {
+    border-radius: 10px !important;
+    font-weight: 700 !important;
+    min-height: 42px;
+}
 
-.stButton > button {
+.stButton > button[kind="primary"] {
+    background: #2563EB !important;
+    border: 1px solid #3B82F6 !important;
+}
+
+/* ================= PROGRESS ================= */
+
+.stProgress > div > div {
     background: #3B82F6;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    padding: 0.6rem 1.2rem;
-    font-weight: 600;
-    transition: 0.2s;
 }
 
-.stButton > button:hover {
-    background: #2563EB;
-    border: none;
-}
+/* ================= OTHER ================= */
 
-
-/* ---------- FILE UPLOADER ---------- */
-
-section[data-testid="stFileUploader"] {
-    background: #111827;
-    border: 1px dashed #334155;
+.stAlert {
     border-radius: 12px;
 }
 
-
-/* ---------- INFO / SUCCESS BOXES ---------- */
-
-div[data-testid="stAlert"] {
-    background: #111827;
-    border-radius: 10px;
+hr {
+    border-color: #1E293B;
 }
 
-
-/* ---------- SIDEBAR RADIO ---------- */
-
-section[data-testid="stSidebar"] label {
-    border-radius: 8px;
+.section-gap {
+    height: 24px;
 }
 
-
-/* ---------- TOP HEADER ---------- */
-
-header[data-testid="stHeader"] {
-    background: #0B1120;
+.card-gap {
+    height: 14px;
 }
 
+/* ================= MOBILE ================= */
 
-/* ---------- SCROLLBAR ---------- */
+@media (max-width: 800px) {
+    .page-title {
+        font-size: 30px;
+    }
 
-::-webkit-scrollbar {
-    width: 8px;
-}
+    .job-top {
+        flex-direction: column;
+    }
 
-::-webkit-scrollbar-track {
-    background: #080D1A;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #334155;
-    border-radius: 10px;
+    .sidebar-footer {
+        display: none;
+    }
 }
